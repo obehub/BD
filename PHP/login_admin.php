@@ -1,4 +1,9 @@
 <?php
+header('Access-Control-Allow-Origin: https://mubc2026.netlify.app'); 
+
+// Necesitas esto si usas peticiones POST (como tu AJAX)
+header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 // login_admin.php
 // Recibe 'usuario' y 'password' por POST, verifica contra la base de datos
 // Si las credenciales son válidas redirige a ../admin.html, si no vuelve a ../login_admin.html?error=1

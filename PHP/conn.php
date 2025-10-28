@@ -1,19 +1,17 @@
 <?php
 // Cargar las variables del archivo .env
 $envFile = __DIR__ . '/.env';
-
 if (file_exists($envFile)) {
     $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
-        if (strpos(trim($line), '#') === 0) continue; // Saltar comentarios
-        list($name, $value) = explode('=', $line, 2);
-        $name = trim($name);
-        $value = trim($value);
-        putenv("$name=$value");
+        if (strpos(trim($line), '#') === 0) {
+            continue; // Ignorar comentarios
+        }
+        list($key, $value) = explode('=', $line, 2);
+        putenv(trim($key) . '=' . trim($value));
     }
 }
-
-// Obtener las variables del entorno
+// Obtener las variables de entorno
 $host = getenv('DB_HOST');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
