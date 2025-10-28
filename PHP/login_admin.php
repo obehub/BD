@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-require 'conexion.php';
+require 'conn.php';
 
 $usuario = isset($_POST['usuario']) ? trim($_POST['usuario']) : '';
 $password = isset($_POST['password']) ? $_POST['password'] : '';
