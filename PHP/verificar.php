@@ -1,6 +1,6 @@
 <?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    require 'conexion.php';
+    require 'conn.php';
     
     // Verificar si se recibió la cédula
     if(isset($_POST['cedula'])) {
