@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `administradores`
 --
 
-CREATE TABLE `administradores` (
+CREATE TABLE IF NOT EXISTS `administradores` (
   `id` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -49,7 +49,7 @@ INSERT INTO `administradores` (`id`, `usuario`, `password`, `email`, `cedula`, `
 -- Estructura de tabla para la tabla `registro`
 --
 
-CREATE TABLE `registro` (
+CREATE TABLE IF NOT EXISTS `registro` (
   `id_registro` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
