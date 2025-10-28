@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `administradores`
 --
-
+DROP TABLE IF EXISTS administradores;
 CREATE TABLE IF NOT EXISTS `administradores` (
   `id` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
@@ -48,8 +48,8 @@ INSERT INTO `administradores` (`id`, `usuario`, `password`, `email`, `cedula`, `
 --
 -- Estructura de tabla para la tabla `registro`
 --
-
-CREATE TABLE IF NOT EXISTS `registro` (
+DROP TABLE IF EXISTS registro;
+CREATE TABLE `registro` (
   `id_registro` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
@@ -66,10 +66,7 @@ CREATE TABLE IF NOT EXISTS `registro` (
 --
 
 INSERT INTO `registro` (`id_registro`, `nombre`, `apellido`, `cedula`, `telefono`, `lugar`, `mesa`, `rf_por`, `fecha_registro`) VALUES
-(1, 'Obed Abner', 'Chavez Castillo', '402-1284322-7', '829-898-0712', 'Santiago de los caballeros, la reforma', 'mesa #15', 'Malaquias Belen', '2025-10-23 15:21:21'),
-(2, 'Edinson', 'Jimenez Chavez', '402-1284322-8', '809-563-2680', 'Santiago de los caballeros, infotep', 'mesa #1', 'Obed Chavez', '2025-10-23 22:16:39'),
-(3, 'Julio', 'Dominguez', '154-4515415-5', '154-545-1415', 'Santiago de los caballeros, infotep', 'mesa #1', 'Obed Chavez', '2025-10-26 13:03:53'),
-(4, 'Edinson', 'Rodriguez ', '402-1284322-6', '829-898-0788', 'Santiago de los caballeros, infotep', 'mesa #1', 'Malaquias Belen', '2025-10-26 13:04:18');
+(1, 'Obed Abner', 'Chavez Castillo', '402-1284322-7', '829-898-0712', 'Santiago de los caballeros, la reforma', 'mesa #15', 'Malaquias Belen', '2025-10-23 15:21:21');
 
 --
 -- Índices para tablas volcadas
