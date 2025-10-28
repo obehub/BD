@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../IMAGENES/fondo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carta {
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.cartita {
+  width: 100%;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.carta img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.titulo {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.carta label {
+  display: block;
+  margin-top: 25px;
+  color: #555;
+  font-size: 18px;
+  text-align: left;
+}
+
+.carta input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.carta input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.carta button {
+  display: block;
+  padding: 12px;
+  width: 100%;
+  margin-top: 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carta button:hover {
+  background-color: #0056b3;
+}
+
+.form-footer {
+  margin-top: 20px;
+}
+
+/* --- Ajustes para móviles --- */
+@media (max-width: 480px) {
+  .carta {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .carta img {
+    width: 120px;
+  }
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  .carta label {
+    font-size: 16px;
+  }
+
+  .carta input,
+  .carta button {
+    font-size: 16px;
+  }
+}
