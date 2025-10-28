@@ -1,6 +1,6 @@
 <?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-   require 'conexion.php';
+   require 'conn.php';
 
    // Obtener y sanitizar entradas
    $nombre   = isset($_POST['nombre']) ? mysqli_real_escape_string($conexion, $_POST['nombre']) : '';
