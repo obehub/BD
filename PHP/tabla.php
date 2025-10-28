@@ -1,5 +1,5 @@
 <?php
-require 'conexion.php';
+require 'conn.php';
 
 // Configuración de paginación
 $registros_por_pagina = 10;
